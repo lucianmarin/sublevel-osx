@@ -22,6 +22,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let url = NSURL(string: "https://sublevel.net/")
         let requested = NSURLRequest(URL: url!)
         webView.loadRequest(requested)
+        webView.allowsBackForwardNavigationGestures = true
+        if #available(OSX 10.11, *) {
+            webView.allowsLinkPreview = true
+        }
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
