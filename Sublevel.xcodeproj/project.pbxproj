@@ -91,6 +91,7 @@
 					9FBBED051BDCEFBE00DA8991 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 57DJ2DS4TK;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -240,6 +241,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucianmarin.Sublevel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -256,6 +258,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucianmarin.Sublevel;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

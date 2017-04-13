@@ -11,29 +11,29 @@ import WebKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
+
     @IBOutlet weak var window: NSWindow!
-    
+
     var webView = WKWebView()
-    
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         window.contentView = webView
-        let url = NSURL(string: "https://sublevel.net/")
-        let requested = NSURLRequest(URL: url!)
-        webView.loadRequest(requested)
+        let url = URL(string: "https://sublevel.net/")
+        let requested = URLRequest(url: url!)
+        webView.load(requested)
         webView.allowsBackForwardNavigationGestures = true
         if #available(OSX 10.11, *) {
             webView.allowsLinkPreview = true
         }
     }
 
-    func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true;
     }
-    
-    func applicationWillTerminate(aNotification: NSNotification) {
+
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-    
+
 }
